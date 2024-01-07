@@ -1,8 +1,10 @@
 {
-  "name": "rust-app",
+  "name": "cgpa-calculator",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.1",
   "type": "module",
+  "publisher": "abhiraj chaudhuri",
+  "icon": "src-tauri/icons/icon.png",
   "scripts": {
     "tauri": "tauri"
   },
