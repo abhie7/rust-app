@@ -45,8 +45,8 @@ async function calculateBtn() {
 
     try {
       const result = await invoke("calculate_and_display_cgpa", {
-        grade_points: totalGradePoints,
-        credits: totalCredits,
+        totalGradePoints: totalGradePoints, // Correct key name
+        totalCredits: totalCredits, // Correct key name
       })
       console.log("Calculation result:", result)
       displayCgpa(result)
@@ -58,5 +58,5 @@ async function calculateBtn() {
 calculateBtn()
 
 function displayCgpa(cgpa) {
-  cgpaResult.textContent = "Your CGPA is " + cgpa
+  cgpaResult.textContent = "Your CGPA is " + cgpa + "."
 }
