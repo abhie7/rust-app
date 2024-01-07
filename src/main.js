@@ -1,6 +1,5 @@
 const { invoke } = window.__TAURI__.tauri
 
-// main.js
 const inputFields = document.getElementById("input-fields")
 const subjectRowTemplate = inputFields.querySelector(".subject-row")
 const addSubjectButton = document.getElementById("add-subject")
@@ -27,8 +26,8 @@ function addSubject() {
 }
 addSubject()
 
-function calculateBtn() {
-  calculateButton.addEventListener("click", () => {
+async function calculateBtn() {
+  calculateButton.addEventListener("click", async () => {
     const gradePoints = []
     const credits = []
 
@@ -39,6 +38,25 @@ function calculateBtn() {
       gradePoints.push(parseFloat(gpInput.value))
       credits.push(parseInt(creditsSelect.value))
     }
+
+    // Calculate total grade points and total credits
+    const totalGradePoints = gradePoints.reduce((acc, curr) => acc + curr, 0)
+    const totalCredits = credits.reduce((acc, curr) => acc + curr, 0)
+
+    try {
+      const result = await invoke("calculate_and_display_cgpa", {
+        grade_points: totalGradePoints,
+        credits: totalCredits,
+      })
+      console.log("Calculation result:", result)
+      displayCgpa(result)
+    } catch (error) {
+      console.error("Error calculating CGPA:", error)
+    }
   })
 }
 calculateBtn()
+
+function displayCgpa(cgpa) {
+  cgpaResult.textContent = "Your CGPA is " + cgpa
+}
