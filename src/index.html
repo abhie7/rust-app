@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="styles.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CGPA Calculator App</title>
+    <script type="module" src="/main.js" defer></script>
+  </head>
+
+  <body>
+    <h1>CGPA Calculator</h1>
+    <div id="input-fields">
+      <div class="subject-row">
+        <input type="number" id="gp-0" placeholder="Enter Grade Points" />
+        <select class="credits">
+          <option value="2">2 Credits</option>
+          <option value="3">3 Credits</option>
+          <option value="4">4 Credits</option>
+          <option value="5">5 Credits</option>
+        </select>
+      </div>
+    </div>
+    <div class="btns">
+      <button id="add-subject">Add Subject</button>
+      <button id="calculate">Calculate CGPA</button>
+    </div>
+    <p id="cgpa-result"></p>
+  </body>
+</html>

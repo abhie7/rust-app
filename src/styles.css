@@ -1,0 +1,153 @@
+@font-face {
+  font-family: "Dank";
+  src: url("./fonts/Dank Mono Regular.woff2") format("woff2");
+}
+
+:root {
+  font-family: "Dank", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #0f0f0f;
+  background-color: #f6f6f6;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 40px;
+}
+
+h1 {
+  text-align: center;
+}
+
+#input-fields {
+  margin: 20px 0;
+}
+
+.subject-row {
+  margin-bottom: 10px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+input[type="number"] {
+  width: 60%;
+  color: #fff;
+  background-color: #0f0f0f98;
+  border-radius: 10px 0 0 10px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-family: "Dank", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  transition: border-color 0.25s;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+  outline: none;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='20' height='20'><path fill='%23ffffff' d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>")
+    no-repeat;
+  background-position: right 10px top 50%;
+  background-size: 24px;
+  color: #fff;
+}
+
+.credits {
+  width: 40%;
+  color: #fff;
+  background-color: #0f0f0f98;
+  border-radius: 0 10px 10px 0;
+  border-right: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+  border-top: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-family: "Dank", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  transition: border-color 0.25s;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+  outline: none;
+}
+
+input[type="number"]::placeholder,
+.credits::placeholder {
+  color: #fff;
+  opacity: 0.7;
+}
+
+#cgpa-result {
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.btns {
+  display: flex;
+  justify-content: center;
+  gap: 5%;
+}
+
+button {
+  width: 50%;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 20px;
+  font-weight: 500;
+  transition: border-color 0.25s;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+  outline: none;
+}
+
+button:hover,
+button:active {
+  border-color: #396cd8;
+}
+
+button:active {
+  background-color: #e8e8e8;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color: #f6f6f6;
+    background-color: #212121;
+  }
+
+  a:hover {
+    color: #24c8db;
+  }
+
+  input,
+  button,
+  #credits-0 {
+    color: #ffffff;
+    background-color: #0f0f0f98;
+  }
+
+  button:active {
+    background-color: #0f0f0f69;
+  }
+}
