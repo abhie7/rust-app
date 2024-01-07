@@ -22,7 +22,7 @@ This project is aimed at creating a simple yet functional CGPA calculator. It al
 
 ## Installation
 
-You can install the latest version of the application from the [Releases](#releases) section.
+You can install the latest version of the application from the [Releases](https://github.com/abhie7/rust-cgpa-calculator-app/releases/tag/v1.0.1) section.
 
 ## Usage
 
